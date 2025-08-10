@@ -1,1 +1,1 @@
-**git@github.com:ElenaKonyaeva/slozhno-sosredotochitsya-fd.git**
+**(https://github.com/ElenaKonyaeva/slozhno-sosredotochitsya-fd.git)**
