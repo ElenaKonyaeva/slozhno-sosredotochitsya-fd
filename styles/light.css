@@ -6,20 +6,15 @@
  --main-font: "IBM Plex Mono", sans-serif;
  --h1-title-color: #FFC2E6;
  --accent-color-button: #353430;
-} /*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+} 
 
-:root.theme-light {
- .button-rec {
+:root.theme-light .button-rec {
   display: none;
  }
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+
+:root.theme-light .middle-section .content-section .content-text {
+  padding-left: 9.5px;
+ }
 }
 
 @media (prefers-color-scheme: light) {
@@ -32,9 +27,15 @@
    --h1-title-color: #FFC2E6;
    --accent-color-button: #353430;
   }
-  :root.theme-auto .button-rec {
-  display: none;
-  
+
+
+}
+:root.theme-auto .header .button-rec {
+    display: none;
+  }
+
+:root.theme-auto .middle-section .content-section .content-text {
+    padding-left: 0px;
 }
   
-}
+
