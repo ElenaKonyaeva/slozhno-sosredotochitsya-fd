@@ -15,7 +15,7 @@
 :root.theme-light .middle-section .content-section .content-text {
   padding-left: 9.5px;
  }
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {
