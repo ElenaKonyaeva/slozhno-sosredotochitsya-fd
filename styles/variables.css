@@ -1,20 +1,13 @@
 :root {
- --bg-image: url(../images/cover-image-dark.png);
- --text-color:#F1B2CE ;
- --accent-color: #FF0070;
- --accent-color-transparent: rgba(255, 0, 112, 0.4);
- --main-font: "IBM Plex Mono", sans-serif;
- --accent-font: ;
- --h3-title-color: #000028;
- --h1-title-color: #DB00FF;
-
-
-
-
-
-
-
-}/*
+  --bg-image: url(../images/cover-image-dark.png);
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --accent-color-transparent: rgba(255, 0, 112, 0.4);
+  --main-font: "IBM Plex Mono", sans-serif;
+  --special-color: #000028;
+  --variant-color: #db00ff;
+  --accent-color-button: #ff0070;
+} /*
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
