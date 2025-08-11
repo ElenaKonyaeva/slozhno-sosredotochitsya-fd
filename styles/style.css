@@ -335,7 +335,7 @@
     justify-self: end;
     inline-size: 50%;
     grid-row: 3 / 3;
-    margin-block-end: 56px;
+    margin-block-end: 55px;
   }
 
   .decorated-zone::before {
@@ -436,7 +436,7 @@
   .header {
     min-height: 728px;
     margin: 1.25rem;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   .description {
