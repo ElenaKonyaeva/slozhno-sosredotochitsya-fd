@@ -3,7 +3,7 @@
   background-image: var(--bg-image, #000028);
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--special-color, #000028);
+  background-color: var(--bg-color, #000028);
   color: var(--text-color, #f1b2ce);
   font-family: var(--main-font, monospace);
   position: relative;
@@ -61,7 +61,6 @@
   flex-direction: column;
   width: fit-content;
   background-color: transparent;
-  
 }
 
 .header__theme-menu-item {
@@ -84,7 +83,6 @@
   font-size: 18px;
   font-weight: inherit;
   padding: 0px 13px 1.5px;
-  
 }
 .header__theme-menu-button:hover {
   border: 1px solid var(--accent-color-transparent, rgba(255, 0, 112, 0.4));
@@ -128,7 +126,6 @@
   align-self: center;
   grid-row: 2 / 2;
   margin-top: 2px;
-  
 }
 
 .decorated-zone {
@@ -189,7 +186,6 @@
 .section-content {
   display: grid;
   gap: 20px;
-
 }
 
 .content-title {
@@ -228,13 +224,11 @@
 
 .card-content {
   grid-column: 1 / -1;
-  
 }
 
-.card-content .card-title { 
+.card-content .card-title {
   margin-bottom: 0px;
-
-} 
+}
 
 .card-text {
   color: var(--text-color, #f1b2ce);
@@ -242,8 +236,6 @@
   font-size: 18px;
   line-height: 130%;
 }
-
-
 
 .text-link {
   text-decoration: none;
@@ -304,7 +296,6 @@
   align-self: center;
   justify-self: center;
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
-  
 }
 
 @media (width >= 768px) {
@@ -329,9 +320,8 @@
   }
 
   .button-rec::after {
-   content: "";
-   margin-right: 2px;
-  
+    content: "";
+    margin-right: 2px;
   }
 
   .header__theme-menu {
@@ -370,7 +360,6 @@
     display: inline-block;
     top: 20px;
     right: 20px;
-    
   }
 
   .section {
@@ -467,7 +456,6 @@
     min-height: 728px;
     padding: 1.25rem;
     margin-bottom: 40px;
-    
   }
 
   .description {
@@ -502,7 +490,6 @@
     display: inline-block;
     top: 20px;
     right: 20px;
-    
   }
   .section-content-block .title-decor {
     padding-left: 0px;
