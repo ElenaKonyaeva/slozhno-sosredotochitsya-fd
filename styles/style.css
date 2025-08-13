@@ -16,7 +16,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr min-content 1fr;
-  margin: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  margin-bottom: 30px;
 
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
@@ -24,7 +25,8 @@
 .button-rec {
   position: absolute;
   display: inline-flex;
-  right: 6px;
+  top: 10px;
+  right: 15px;
   background-color: transparent;
   color: var(--accent-color, #ff0070);
   border: none;
@@ -50,13 +52,16 @@
 .header__theme-menu {
   justify-self: self-end;
   align-self: center;
+  margin-bottom: 5px;
 }
+
 .header__theme-menu-list {
   display: flex;
   gap: 10px;
   flex-direction: column;
   width: fit-content;
   background-color: transparent;
+  
 }
 
 .header__theme-menu-item {
@@ -76,10 +81,10 @@
   width: 100%;
   border: none;
   text-align: center;
-  font-size: inherit;
+  font-size: 18px;
   font-weight: inherit;
-  letter-spacing: 1.5px;
-  padding: 0px 13px 5px;
+  padding: 0px 13px 1.5px;
+  
 }
 .header__theme-menu-button:hover {
   border: 1px solid var(--accent-color-transparent, rgba(255, 0, 112, 0.4));
@@ -122,7 +127,8 @@
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
   align-self: center;
   grid-row: 2 / 2;
-  padding-bottom: 18px;
+  margin-top: 2px;
+  
 }
 
 .decorated-zone {
@@ -139,23 +145,23 @@
 
 .decorated-zone::before {
   display: inline-block;
-  bottom: 20px;
-  left: 1px;
+  bottom: 10px;
+  left: 10px;
   border-left: 1px solid var(--accent-color-button, #ff0070);
   border-bottom: 1px solid var(--accent-color-button, #ff0070);
 }
 
 .decorated-zone::after {
   display: inline-block;
-  top: 1px;
-  right: 1px;
+  top: 10px;
+  right: 10px;
   border-right: 1px solid var(--accent-color-button, #ff0070);
   border-top: 1px solid var(--accent-color-button, #ff0070);
 }
 
 .description {
   display: block;
-  margin-block-start: 40px;
+  margin-block-start: 58px;
   min-inline-size: 355px;
   grid-row: 3 / 3;
   justify-self: center;
@@ -169,6 +175,7 @@
   margin-bottom: 30px;
   margin-top: 20px;
 }
+
 .section:last-child {
   margin-bottom: 0;
 }
@@ -182,6 +189,7 @@
 .section-content {
   display: grid;
   gap: 20px;
+
 }
 
 .content-title {
@@ -218,9 +226,15 @@
   padding-left: 10px;
 }
 
-.card-article {
+.card-content {
   grid-column: 1 / -1;
+  
 }
+
+.card-content .card-title { 
+  margin-bottom: 0px;
+
+} 
 
 .card-text {
   color: var(--text-color, #f1b2ce);
@@ -229,9 +243,7 @@
   line-height: 130%;
 }
 
-.card-article .card-title {
-  margin-bottom: 0px;
-}
+
 
 .text-link {
   text-decoration: none;
@@ -284,17 +296,15 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   position: relative;
-  margin-top: 40px;
-  margin-left: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
-  margin-right: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
-  margin-bottom: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
+  margin-top: 30px;
+  padding: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
 }
 
 .footer .main-title {
   align-self: center;
   justify-self: center;
   text-shadow: 2px 2px 0 var(--accent-color, #ff0070);
-  margin-bottom: 15px;
+  
 }
 
 @media (width >= 768px) {
@@ -307,26 +317,37 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-row: 1fr min-content 1fr;
-    margin-bottom: 61px;
+    margin-bottom: 40px;
   }
 
   .button-rec {
     grid-row: 1 / 1;
+    position: absolute;
+    display: inline-flex;
+    top: 1px;
+    right: 28px;
+  }
+
+  .button-rec::after {
+   content: "";
+   margin-right: 2px;
+  
   }
 
   .header__theme-menu {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
     align-self: center;
-    margin-top: 16px;
+    margin-top: 0px;
   }
+
   .header .main-title {
     margin-left: -20px;
     grid-column: 1;
     grid-row: 2 / 2;
     align-self: center;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-top: 18px;
+    margin-top: 0px;
   }
 
   .description {
@@ -335,13 +356,21 @@
     justify-self: end;
     inline-size: 50%;
     grid-row: 3 / 3;
-    margin-block-end: 55px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
   }
 
   .decorated-zone::before {
     display: inline-block;
-    bottom: 0px;
-    left: 0px;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::after {
+    display: inline-block;
+    top: 20px;
+    right: 20px;
+    
   }
 
   .section {
@@ -424,27 +453,31 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-    margin-top: 60px;
+    margin-top: 40px;
   }
   .footer .main-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-bottom: 0;
+    margin-top: 0px;
   }
 }
 
 @media (width >= 1024px) {
   .header {
     min-height: 728px;
-    margin: 1.25rem;
-    margin-bottom: 55px;
+    padding: 1.25rem;
+    margin-bottom: 40px;
+    
   }
 
   .description {
-    margin-top: 53px;
+    margin-top: 13px;
+    margin-block-end: 0px;
   }
 
-  .main-title {
+  .header .main-title {
     align-self: center;
+    margin-top: 0;
   }
 
   .header__theme-menu {
@@ -458,6 +491,21 @@
     display: flex;
     gap: 10px;
     flex-direction: row;
+  }
+  .decorated-zone::before {
+    display: inline-block;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::after {
+    display: inline-block;
+    top: 20px;
+    right: 20px;
+    
+  }
+  .section-content-block .title-decor {
+    padding-left: 0px;
   }
 
   .section-content-block {
@@ -478,7 +526,7 @@
   }
 
   .footer {
-    margin-block-start: 60px;
+    margin-block-start: 40px;
     min-height: 728px;
   }
 }
